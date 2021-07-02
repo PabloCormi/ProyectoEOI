@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProyectoEOI</string>
+    <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
+    <string name="bienvenida">Bienvenido a la gran comunidad deportiva de SportApp</string>
+    <string name="bienvenida2">Únete para encontrar tu partido perfecto</string>
+</resources>
