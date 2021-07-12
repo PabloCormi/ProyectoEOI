@@ -1,6 +1,7 @@
 package com.eoi.proyectoeoi
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -53,12 +54,13 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun signEnd() {
-
+        startActivity(Intent(this, HomeActivity::class.java))
+        finish()
     }
 
     fun checkRegister() {
         val okPassword = b.etPassword.toString()
-        if(okPassword.length < 6) {
+        if(okPassword.length >= 6) {
             val edit = sharedPref.edit()
             edit.putString(USERNAME, okPassword)
             edit.apply()
