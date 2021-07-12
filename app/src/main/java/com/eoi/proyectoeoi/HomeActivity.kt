@@ -38,7 +38,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         b.btOkSign.setOnClickListener {
-            checkRegister()
+            signEnd()
         }
 
     }
@@ -54,18 +54,18 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun signEnd() {
+        checkRegister()
         startActivity(Intent(this, HomeActivity::class.java))
         finish()
     }
 
     fun checkRegister() {
         val okPassword = b.etPassword.toString()
-        if(okPassword.length >= 6) {
+        if(okPassword.length >= 6 || okPassword != "") {
             val edit = sharedPref.edit()
             edit.putString(USERNAME, okPassword)
             edit.apply()
 
-            signEnd()
         } else {
             Toast.makeText(this, "Introduce una contraseña válida", Toast.LENGTH_SHORT).show()
         }
